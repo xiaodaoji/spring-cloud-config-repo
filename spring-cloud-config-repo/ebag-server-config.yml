@@ -1,0 +1,46 @@
+server:
+  port: 2019
+spring:
+  application:
+    name: ebag-correct-home
+#  redis:
+##    host: 192.168.1.161
+#    host: 120.0.0.1
+#  datasource:
+#    name: ebagnew
+#    username: dev
+#    password: 1qaz_PL
+#    url: jdbc:mysql://rdspg63w3505z6a024i2.mysql.rds.aliyuncs.com:3306/ebagnew?useUnicode=true&autoReconnect=true
+#    driver-class-name: com.mysql.jdbc.Driver
+ 
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+
+security:
+  oauth2:
+    resource:
+      id: ebag-correct-home
+      user-info-uri: http://localhost:9001/oauth/user
+      prefer-token-info: false
+
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: countSql
+
+logging:
+  level:
+    com:
+      ysb:
+        ebag:
+          correct:
+            home:
+              controller: WARN
+              dao: DEBUG
