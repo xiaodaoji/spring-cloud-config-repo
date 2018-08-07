@@ -3,15 +3,7 @@ server:
 spring:
   application:
     name: ebag-correct-home
-#  redis:
-##    host: 192.168.1.161
-#    host: 120.0.0.1
-#  datasource:
-#    name: ebagnew
-#    username: dev
-#    password: 1qaz_PL
-#    url: jdbc:mysql://rdspg63w3505z6a024i2.mysql.rds.aliyuncs.com:3306/ebagnew?useUnicode=true&autoReconnect=true
-#    driver-class-name: com.mysql.jdbc.Driver
+
  
 
 eureka:
